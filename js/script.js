@@ -1,11 +1,7 @@
+function generate(){
+    var followers = Math.floor(Math.random() * 999) + 1;
+    var likes = Math.floor(Math.random() * 999) + 1;
 
-function random(firstname){
-    return firstname[Math.floor(Math.random()*firstname.lenght)];
-};
-
-const firstname = ['Nathan','Emma'];
-
-const lastname = ['Pauzin','Sichouc'];
-
-
-console.log(random(firstname));
+    document.getElementById("numf").textContent = followers;
+    document.getElementById("numl").textContent = likes;
+}

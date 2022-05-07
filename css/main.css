@@ -65,5 +65,13 @@ article#stats aside p{
 button{
     color: white;
     background-color: black;
+    border-radius: 25px;
     padding: 2%;
+    transition: 0.2s;
+}
+
+button:hover{
+    cursor: pointer;
+    background-color: white;
+    color: black;
 }
