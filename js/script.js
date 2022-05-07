@@ -9,7 +9,7 @@ function generate(){
     var pseudo = "@" + randomfirst + "." + randomlast;
 
     var followers = Math.floor(Math.random() * 999) + 1;
-    var likes = Math.floor(Math.random() * 999) + 1;
+    var likes = Math.floor(Math.random() * followers) + 1;
 
     document.getElementById("pseudo").textContent = pseudo;
 
