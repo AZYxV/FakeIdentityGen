@@ -26,7 +26,6 @@ section#card{
     flex-direction: column;
     align-items: center;
     max-width: 500px;
-    max-width: 300px;
     padding: 2rem 0rem;
     margin: 2rem 5rem;
 
@@ -38,9 +37,13 @@ img#avatar{
     border-radius: 50%;
 }
 
-h1#pseudo{
+h1{
     text-align: center;
     font-size: 3rem;
+}
+
+h2{
+    font-size: 2rem;
 }
 
 article#stats{
@@ -60,6 +63,19 @@ article#stats aside img{
 article#stats aside p{
     text-align: center;
     font-size: 2rem;
+}
+
+article#name{
+    display: flex;
+    justify-content: center;
+}
+
+article#name aside{
+    padding: 2rem 5rem; 
+}
+
+article#name aside p{
+    font-size: 1.5rem;
 }
 
 button{
