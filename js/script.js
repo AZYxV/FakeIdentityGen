@@ -1,5 +1,5 @@
 function generate(){
-
+    
     $.ajax({
         url: 'https://randomuser.me/api/',
         dataType: 'json',
