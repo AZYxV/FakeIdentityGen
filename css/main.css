@@ -25,7 +25,7 @@ section#card{
     display: flex;
     flex-direction: column;
     align-items: center;
-    max-width: 500px;
+    width: 500px;
     padding: 2rem 0rem;
     margin: 2rem 5rem;
 
@@ -35,47 +35,44 @@ img#avatar{
     max-width: 150px;
     max-height: 150px;
     border-radius: 50%;
+    border: 3px solid black;
 }
 
 h1{
-    text-align: center;
     font-size: 3rem;
+    padding: 1rem 0rem;
 }
 
 h2{
     font-size: 2rem;
 }
 
-article#stats{
+article#identity{
     display: flex;
     justify-content: center;
+    border-bottom: 2px solid black;
 }
 
-article#stats aside{
+article#identity aside{
     padding: 2rem 5rem; 
 }
 
-article#stats aside img{
-    max-width: 50px;
-    max-height: 50px;
-}
-
-article#stats aside p{
-    text-align: center;
-    font-size: 2rem;
-}
-
-article#name{
-    display: flex;
-    justify-content: center;
-}
-
-article#name aside{
-    padding: 2rem 5rem; 
-}
-
-article#name aside p{
+article#identity aside p{
     font-size: 1.5rem;
+    padding-bottom: .5rem;
+}
+
+article#location{
+    text-align: center;
+}
+
+article#location aside{
+    padding: 2rem 5rem; 
+}
+
+article#location aside p{
+    font-size: 1.5rem;
+    padding-bottom: .5rem;
 }
 
 button{

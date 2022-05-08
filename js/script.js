@@ -1,21 +1,27 @@
 function generate(){
 
-    const firstname = ['Nathan','Emma','Theo','Guillaume','Mateo','Jean'];
-    const lastname = ['Strickland','Tate','Edwards','Gibbs','Whittle','Mills'];
+    $.ajax({
+        url: 'https://randomuser.me/api/',
+        dataType: 'json',
+        success: function(data) {
+            console.log(data);
 
-    const randomfirst = firstname[Math.floor(Math.random() * firstname.length)];
-    const randomlast = lastname[Math.floor(Math.random() * lastname.length)];
+            document.getElementById("avatar").src = data['results'][0]['picture']['large'];
+            document.getElementById("pseudo").textContent = "@" + data['results'][0]['login']['username'];
 
-    var pseudo = "@" + randomfirst + "." + randomlast;
 
-    var followers = Math.floor(Math.random() * 999) + 1;
-    var likes = Math.floor(Math.random() * followers) + 1;
+            document.getElementById("firstn").textContent = data['results'][0]['name']['first'];
+            document.getElementById("lastn").textContent = data['results'][0]['name']['last'];
 
-    document.getElementById("pseudo").textContent = pseudo;
+            document.getElementById("age").textContent = data['results'][0]['dob']['age'];
+            document.getElementById("gender").textContent = data['results'][0]['gender'];
 
-    document.getElementById("numf").textContent = followers;
-    document.getElementById("numl").textContent = likes;
 
-    document.getElementById("firstn").textContent = randomfirst;
-    document.getElementById("lastn").textContent = randomlast;
+            document.getElementById("country").textContent = data['results'][0]['location']['country'];
+            document.getElementById("city").textContent = data['results'][0]['location']['city'];
+
+            document.getElementById("email").textContent = data['results'][0]['email'];
+            document.getElementById("phone").textContent = data['results'][0]['phone'];
+        }
+      });
 }
